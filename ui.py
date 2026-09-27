@@ -10,6 +10,7 @@ from chat_utils import load_chats, save_chats
 st.set_page_config(page_title="New Chat", layout="wide")
 st.title("📄 RAG Study Assistant ")
 st.subheader("➕ Create a new chat")
+st.info("Upload your study material and ask questions directly from your documents.")
 
 # Load existing chats from disk
 chats = load_chats()
@@ -17,7 +18,7 @@ chats = load_chats()
 st.subheader("Upload a document")
 
 upload = st.file_uploader(
-    "Supported formats: PDF, DOCX, PPTX, TXT",
+    "📄 Supported formats: PDF, DOCX, PPTX, TXT",
     type=["pdf", "docx", "pptx", "txt"],
     accept_multiple_files=False,
 )
